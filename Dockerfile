@@ -38,6 +38,3 @@ ENV processes 500
 ENV sessions 555
 ENV transactions 610
 
-ADD entrypoint.sh /
-ENTRYPOINT ["/entrypoint.sh"]
-CMD [""]
