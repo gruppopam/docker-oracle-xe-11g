@@ -19,6 +19,12 @@ mkdir /var/lock/subsys &&\
 chmod 755 /sbin/chkconfig &&\
 /oracle-install.sh
 
+# Install Python.
+RUN \
+  apt-get update && \
+  apt-get install -y python python-dev python-pip python-virtualenv && \
+  rm -rf /var/lib/apt/lists/*
+
 # see issue #1
 ENV ORACLE_HOME /u01/app/oracle/product/11.2.0/xe
 ENV PATH $ORACLE_HOME/bin:$PATH
